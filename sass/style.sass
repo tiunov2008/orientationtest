@@ -1,0 +1,94 @@
+*
+    margin: 0
+    padding: 0
+
+
+.container
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    background: #c4c4c490
+    padding: 50px 70px
+    perspective:1000px
+    gap: 20px
+.card
+    width: 120px
+    height: 200px
+    &-wrapper
+        width: 120px
+        height: 200px
+    &-img
+        width: 80px
+        height: 60px
+        border-radius: 5px
+        margin-bottom: 20px
+        background: #1d1d1d
+    &-text
+        background: #9a9a9a
+        width: 80px
+        height: 10px
+        border-radius: 10px
+        margin-bottom: 5px
+        &:last-child
+            margin: 0 
+    &-3d 
+        transform-style: preserve-3d
+        transform: rotate3d(0.5, -1, 0, 30deg)
+        transition: 1s
+        position: relative
+    &-left 
+        width: 10px
+        height: 200px
+        background: #9a9a9a
+        position: absolute
+        transform-origin: left center
+        transform: translateZ(5px) rotateY(90deg)
+        top: 0
+        left: 0
+    &-right 
+        width: 10px
+        height: 200px
+        background: #9a9a9a
+        position: absolute
+        transform-origin: right center
+        transform: translateZ(5px) rotateY(-90deg)
+        top: 0
+        right: 0
+    &-bottom 
+        width: 120px
+        height: 10px
+        background: #9a9a9a
+        position: absolute
+        transform-origin: bottom center
+        bottom: 0
+        transform: translateZ(5px) rotateX(90deg)
+    &-top 
+        width: 120px
+        height: 10px
+        background: #9a9a9a
+        position: absolute
+        top: 0
+        transform-origin: top center
+        transform: translateZ(5px) rotateX(-90deg)
+    &-back 
+        width: 120px
+        height: 200px
+        background: #9a9a9a
+        position: absolute
+        top: 0
+        left: 0
+        transform: translateZ(-5px) rotateY(180deg)
+    &-front
+        width: 100px
+        height: 160px
+        padding: 20px 10px
+        border-radius: 5px
+        background: #fff
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        transform: translateZ(5px)
+
+
+    
