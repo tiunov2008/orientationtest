@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     //    });
     //});
     window.addEventListener('devicemotion',(e)=>{
-        console.log(e.acceleration.z);
+        document.querySelector('h1').innerHTML = e.acceleration.x;
         [...document.querySelectorAll('.card')].forEach(element => {
-        element.style.transform = `rotateZ(${e.acceleration.z}deg)`
+        element.style.transform = `rotateZ(${e.acceleration.x}deg)`
         });
     })
 })
