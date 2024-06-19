@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     function onOrientationChange(e) {
         [...document.querySelectorAll('.card')].forEach(element => {
-            element.style.transform = `rotateZ(${Math.round(e.alpha)}deg)`
+            element.style.webkitTransform  = `rotateZ(${Math.round(e.alpha)}deg) rotateX(${Math.round(e.gamma)}deg) rotateY(${Math.round(e.beta)}deg)`
         });
     }
     
